@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 
 :: Set your fonts source folder here
 :: Thêm đường dân đến thư mục chứa font vào biến fontFolder
-set "fontFolder=D:\D drive\Fonts"
+set "fontFolder=X:\Thư mục của bạn\..."
 
 :: System fonts directory
 set "fontsDir=%WINDIR%\Fonts"
