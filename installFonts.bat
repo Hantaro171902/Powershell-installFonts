@@ -3,10 +3,17 @@ setlocal enabledelayedexpansion
 
 :: Set your fonts source folder here
 :: Thêm đường dân đến thư mục chứa font vào biến fontFolder
-set "fontFolder=X:\Thư mục của bạn\..."
+set "fontFolder=D:\D drive\Fonts"
 
 :: System fonts directory
 set "fontsDir=%WINDIR%\Fonts"
+
+:: Function to unzip .zip files
+echo Unzipping .zip files...
+for /r "%fontFolder%" %%F in (*.zip) do (
+    echo Unzipping: %%F
+    powershell.exe -noprofile -command "Expand-Archive -Path '%%F' -DestinationPath '%fontFolder%' -Force"
+)
 
 :: Function to install fonts
 echo Installing .otf fonts...
